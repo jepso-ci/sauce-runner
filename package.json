@@ -1,0 +1,23 @@
+{
+  "name": "sauce-runner",
+  "version": "0.0.0",
+  "description": "Run tests for a given all versions of a browser",
+  "main": "index.js",
+  "dependencies": {
+    "debug": "~0.7.0",
+    "q": "~0.8.11",
+    "sauce-lab": "~0.0.1",
+    "test-platforms": "~2.0.1",
+    "uglify-js": "~2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jepso-ci/sauce-runner.git"
+  },
+  "author": "",
+  "license": "MIT"
+}
