@@ -23,10 +23,35 @@ function user(user, key) {
             intermediateCB(browser);
             var config = {user: user, key: key, browser: browser, url: url, name: name, tags: tags};
             config.code = code;
+
+            var start = null;
+            var completedTests = -1;
+            var warned = false;
             config.parse = function (res) {
+              if (start == null) {
+                start = new Date();
+              } else {
+                if (completedTests != res.c && typeof res.c === 'number') {
+                  completedTests = res.c;
+                  start = new Date();
+                  warned = false;
+                } else if (!res.f && start.getTime() + 1000 * 60 < Date.now()) {
+                  if (warned) {
+                    return {
+                      passed: false,
+                      report: { type: 'OperationTimeout' },
+                      version: browser.version};
+                  } else {
+                    warned = true;
+                  }
+                }
+              }
               debug('res %s: %j', browser, res);
               if (!res.f) return null;//not finished yet
-              return {passed: res.p, report: res.r, version: browser.version};
+              return {
+                passed: res.p,
+                report: typeof res.r === 'object' ? res.r : null,
+                version: browser.version};
             };
             return sauce(config);
           } else {
