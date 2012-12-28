@@ -1,7 +1,7 @@
 {
   "name": "sauce-runner",
-  "version": "0.0.0",
-  "description": "Run tests for a given all versions of a browser",
+  "version": "0.0.1",
+  "description": "Run tests for a all versions of a given browser",
   "main": "index.js",
   "dependencies": {
     "debug": "~0.7.0",
