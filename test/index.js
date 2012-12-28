@@ -75,7 +75,7 @@ nIt.skip = it.skip.bind(it);
     });
   });
 
-  describe.skip('404', function () {
+  describe('404', function () {
     describe('on chrome', function () {
       it('fails', function () {
         return run('chrome', 'http://mocha-ci.com/api/non-existant/test.html',
@@ -83,8 +83,7 @@ nIt.skip = it.skip.bind(it);
           .then(function (res) {
             assert(res.passed === false);
             assert(res.report && typeof res.report === 'object');
-            assert(res.report.type === '404-PageNotFound');
-            assert(res.report.page === 'http://mocha-ci.com/api/non-existant/test.html');
+            assert(res.report.type === 'OperationTimeout');//this could be changed as it's not ideal now
             assert(res.failedVersion === null);
             assert(res.passedVersion === undefined);
           });
