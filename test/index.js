@@ -1,7 +1,7 @@
 var Q = require('q');
 var assert = require('better-assert');
 var run = require('../').user('sauce-runner', 'c71a5c75-7c28-483f-9053-56da13b40bc2');
-var throttle = require('throat')(3);
+var throttle = require('throat')(2);
 
 var skip = false;
 var path = [{desc:[], it:[]}];
