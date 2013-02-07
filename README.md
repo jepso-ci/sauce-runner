@@ -21,5 +21,5 @@ test('internet explorer',
 // => testing internet explorer version 9 running on Windows 2008
 // => testing internet explorer version 8 running on Windows 2003
 // => testing internet explorer version 7 running on Windows 2003
-// => { passed: false, report: null, failedVersion: '7', passedVersion: '8' }
+// => { passed: false, sessionID: 'dfasjfkasjsa', report: null, failedVersion: '7', passedVersion: '8' }
 ```

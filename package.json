@@ -6,7 +6,7 @@
   "dependencies": {
     "debug": "~0.7.0",
     "q": "~0.8.11",
-    "sauce-lab": "~0.0.1",
+    "sauce-lab": "~0.0.3",
     "test-platforms": "~2.0.1",
     "uglify-js": "~2.2.2"
   },

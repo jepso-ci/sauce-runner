@@ -37,7 +37,7 @@ nIt.skip = it.skip.bind(it);
   describe('minimum', function () {
     describe('on ie', function () {
       it('fails', function () {
-        return run('internet explorer', 'http://mocha-ci.com/api/proxy/jepso-ci-examples/minimum/master/test.html', 
+        return run('internet explorer', 'https://jepso-ci.com/api/proxy/jepso-ci-examples/minimum/master/test.html', 
           'mimimun on ie fails', [], function () {})
           .then(function (res) {
             assert(res.passed === false);
@@ -49,7 +49,7 @@ nIt.skip = it.skip.bind(it);
     });
     describe('on chrome', function () {
       it('passes', function () {
-        return run('chrome', 'http://mocha-ci.com/api/proxy/jepso-ci-examples/minimum/master/test.html', 
+        return run('chrome', 'https://jepso-ci.com/api/proxy/jepso-ci-examples/minimum/master/test.html', 
           'mimimun on chrome passes', [], function () {})
           .then(function (res) {
             assert(res.passed === true);
@@ -62,7 +62,7 @@ nIt.skip = it.skip.bind(it);
   describe('timeout', function () {
     describe('on chrome', function () {
       it('fails', function () {
-        return run('chrome', 'http://mocha-ci.com/api/proxy/jepso-ci-examples/timeout/master/test.html',
+        return run('chrome', 'https://jepso-ci.com/api/proxy/jepso-ci-examples/timeout/master/test.html',
           'timeout on chrome fails', [], function () {})
           .then(function (res) {
             assert(res.passed === false);
@@ -78,7 +78,7 @@ nIt.skip = it.skip.bind(it);
   describe('404', function () {
     describe('on chrome', function () {
       it('fails', function () {
-        return run('chrome', 'http://mocha-ci.com/api/non-existant/test.html',
+        return run('chrome', 'https://jepso-ci.com/api/non-existant/test.html',
           '404 on chrome fails', [], function () {})
           .then(function (res) {
             assert(res.passed === false);

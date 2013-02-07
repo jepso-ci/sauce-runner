@@ -27,7 +27,7 @@ function user(user, key) {
             var start = null;
             var completedTests = -1;
             var warned = false;
-            config.parse = function (res) {
+            config.parse = function (res, id) {
               if (start == null) {
                 start = new Date();
               } else {
@@ -49,6 +49,7 @@ function user(user, key) {
               debug('res %s: %j', browser, res);
               if (!res.f) return null;//not finished yet
               return {
+                sessionID: id,
                 passed: res.p,
                 report: typeof res.r === 'object' ? res.r : null,
                 version: browser.version};
