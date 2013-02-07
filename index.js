@@ -38,6 +38,7 @@ function user(user, key) {
                 } else if (!res.f && start.getTime() + 1000 * 60 < Date.now()) {
                   if (warned) {
                     return {
+                      sessionID: id,
                       passed: false,
                       report: { type: 'OperationTimeout' },
                       version: browser.version};
@@ -63,7 +64,7 @@ function user(user, key) {
     return result
       .then(function (res) {
         if (res.passed === true) {
-          return {passed: true, report: res.report};
+          return {passed: true, report: res.report, sessionID: sessionID};
         } else {
           var failedVersion = res.version;
           var passedVersion;
@@ -80,7 +81,8 @@ function user(user, key) {
             passed: false,
             report: res.report,
             failedVersion: failedVersion,
-            passedVersion: passedVersion
+            passedVersion: passedVersion,
+            sessionID: sessionID
           };
         }
       });
