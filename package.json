@@ -1,10 +1,10 @@
 {
   "name": "sauce-runner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run tests for a all versions of a given browser",
   "main": "index.js",
   "dependencies": {
-    "debug": "~0.7.2",
+    "debug": "~0.7",
     "sauce-lab": "~0.0.3",
     "test-platforms": "~2.0",
     "uglify-js": "~2.2",
@@ -18,13 +18,13 @@
     "better-assert": "~1.0.0"
   },
   "scripts": {
-    "test": "mocha -R spec -t 100000 --bail",
+    "test": "mocha -R spec -t 300000 --bail",
     "prepublish": "npm test"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jepso-ci/sauce-runner.git"
   },
-  "author": "",
+  "author": "ForbesLindesay",
   "license": "MIT"
 }
