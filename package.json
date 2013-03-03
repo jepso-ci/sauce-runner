@@ -1,22 +1,25 @@
 {
   "name": "sauce-runner",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Run tests for a all versions of a given browser",
   "main": "index.js",
   "dependencies": {
-    "debug": "~0.7.0",
-    "q": "~0.8.11",
+    "debug": "~0.7.2",
     "sauce-lab": "~0.0.3",
-    "test-platforms": "~2.0.1",
-    "uglify-js": "~2.2.2"
+    "test-platforms": "~2.0",
+    "uglify-js": "~2.2",
+    "request": "~2.14",
+    "q": "~0.9"
   },
   "devDependencies": {
-    "better-assert": "~0.1.0",
     "mocha": "~1.7.4",
-    "throat": "0.0.0"
+    "throat": "0.0.0",
+    "mocha-as-promised": "~1.2.1",
+    "better-assert": "~1.0.0"
   },
   "scripts": {
-    "test": "mocha -R spec -t 80000"
+    "test": "mocha -R spec -t 100000 --bail",
+    "prepublish": "npm test"
   },
   "repository": {
     "type": "git",
