@@ -1,11 +1,11 @@
 {
   "name": "sauce-runner",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Run tests for a all versions of a given browser",
   "main": "index.js",
   "dependencies": {
     "debug": "~0.7",
-    "sauce-lab": "~0.0.3",
+    "sauce-lab": "~1.0",
     "test-platforms": "~2.0",
     "uglify-js": "~2.2",
     "request": "~2.14",
