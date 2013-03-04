@@ -1,4 +1,6 @@
 # sauce-runner
+[![Build Status](https://travis-ci.org/jepso-ci/sauce-runner.png?branch=master)](https://travis-ci.org/jepso-ci/sauce-runner)
+[![Dependency Status](https://gemnasium.com/jepso-ci/sauce-runner.png)](https://gemnasium.com/jepso-ci/sauce-runner)
 
 Run tests for all versions of a given browser
 
